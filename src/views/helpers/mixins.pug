@@ -1,25 +1,33 @@
-mixin card-header (data)
+mixin card-header(data)
     .card-header
        
         .card-header__name= data.name
         .card-header__second= data.second
         .card-header__summary= data.summary
     
-mixin custom-checkbox (label)
+mixin custom-checkbox(label)
     label.custom-checkbox
         input(type="checkbox",class="custom-checkbox__control")
         .custom-checkbox__element
         span.custom-checkbox__label= label
 
 
-mixin input-text (placeholder)
+mixin input-text(placeholder)
     input(type="text",class="input-text",placeholder= placeholder)
        
 
+mixin card__description-data(title, text)
+    label(for="description-radio")
+        input(type="radio" name="description-radio" class="description-control")
+        .card__description-datatitle= title
+    textarea(name="", cols="30", rows="10").card__description-datatext= text
 
 
 
-
+mixin input-range(start, end, value)
+    .input-range-wrapper 
+        input(type="range" min='start' max='end'  value='value' class="input-range") 
+    
 
 
 
